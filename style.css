@@ -1,14 +1,23 @@
 *,
 *::after,
 *::before {
-    box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
 body {
-    font-size: 16px;
+    font-size: 20px;
     font-family: 'Inter', sans-serif;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    margin-bottom: 0;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
     overflow: hidden;
 }
 
@@ -20,7 +29,6 @@ h1 {
 p,
 a,
 button {
-    font-size: 1rem;
     line-height: 2.2rem;
 }
 
@@ -30,8 +38,7 @@ button {
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    width: 100%;
-    height: 20vh;
+    height: 16vh;
     padding: 0 2%;
 }
 
@@ -42,16 +49,6 @@ button {
     align-items: center;
     width: 80%;
     height: 60%;
-}
-
-.header__title {
-    color: #f7f7f7;
-    background: #000000;
-    padding: 1%;
-}
-
-.header__title h1 {
-    font-weight: 500;
 }
 
 .header_nav {
@@ -85,8 +82,8 @@ button {
 .header__title{
     color: #f7f7f7;
     background: #000000;
-
-    padding: 1%;
+    border-radius: 5px;
+    padding: 15px;
 }
 
 .header__title h1{
@@ -103,17 +100,6 @@ button{
     background-color: white;
 }
 
-.sub__container_img{
-    width: 30%;
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
-    align-items: center;
-    align-content: center;
-    flex-wrap: nowrap;
-
-}
-
 .main{
     background-image: url(../WEB_GRUPO_MUSICAL/IMAGENES/fondo.gif);
     background-size: cover;
@@ -121,13 +107,14 @@ button{
     background-attachment: fixed;
     opacity: 0.9;
     width: 100%;
-    height: 70vh;
+    height: 67vh;
     overflow-y: scroll;
     scroll-behavior: smooth;
+    padding-bottom: 8vh;
 }
 
 .main * {
-    font-size: 20px;
+    font-size: 30px;
 }
 
 .section-1 {
@@ -135,8 +122,7 @@ button{
     min-height: 80vh;
     display: grid;
     background-color: rgba(240, 240, 240, 0.7); 
-    margin: 20px;
-    padding: 20px;
+    margin: 110px 110px;
     border-radius: 10px;
 }
 
@@ -149,41 +135,61 @@ button{
     flex-wrap: nowrap;
     width: 100%;
     height: 100%;
-    padding: 10px;
+    padding: 5px;
 }
 
 .section-1__container h1 {
-    color: rgb(0, 0, 0);
-    margin-bottom: 10px; 
+    margin-bottom: 110px; 
     text-transform: uppercase;
     font-weight: bold;
     font-size: 50px;
+    background-color: black;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
 }
 
 .section-1__container p {
     width: 90%; 
     color: #000000;
     text-align: justify;
+    padding: 15px;
 }
+
 .section-1__container table {
+    margin: 0 auto;
     height: auto;
-    width: 100%;
+    width: 80%;
     padding: 5px 30px;
+    text-align: left;
 }
 
 .section-1__container table tr {
-    height: 100px;
+    height: auto;
 }
 
 .section-1__container table img {
     width: 350px;
 }
 
+.section-1__container table strong {
+    font-weight: bold;
+    text-decoration: underline;
+}
+
 .section-1__container button:hover {
     background: #adadad;
 }
 
-.row-1{
+.section-1__container table td {
+    text-align: left;
+}
+
+.audio {
+    padding: 40px;
+}
+
+.row-1, .row-2, .row-3{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -197,36 +203,21 @@ button{
      
 }
 
-.row-2{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    align-content: center;
-
-    flex-direction: row;
-
-    flex-wrap:nowrap;
-
-    width: 100%;
-      
-}
-
-.row-1 div, .row-2 div {
+.row-1 div, .row-2 div , .row-3 div{
     width: 25%;
     padding: 2%;
 }
 
-.row-1 div img, .row-2 div img{
+.row-1 div img, .row-2 div img, .row-3 div img{
     width: 100%;
     object-fit: contain;
-    aspect-ratio: 16/9;
 }
 
 .footer {
     background: linear-gradient(29deg, #00837d, #2bc7ad);
-    width: 100%;
-    height: 10vh;
-    padding: 2%;
+    height: 8vh;
+    padding: 5px;
+    margin-top: auto;
 }
 
 .footer__container {
@@ -272,7 +263,17 @@ button{
 .sub__web a:hover {
     background: #adadad; 
 }
- 
+
+.sub__container_img{
+    width: 250px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    align-content: center;
+    flex-wrap: nowrap;
+}
+
 .container__img a img {
     width: 100%;
     height: 10vh;
@@ -295,11 +296,7 @@ button{
 ::-webkit-scrollbar {
     width: 10px;
   }
-  
-  ::-webkit-scrollbar-track {
-    background: #000000;
-  }
-  
+
   ::-webkit-scrollbar-thumb {
     background: #2bc7ad
   }
